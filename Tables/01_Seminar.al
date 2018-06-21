@@ -22,6 +22,11 @@ table 123456701 Seminar
         {
             Caption = 'Name';
             DataClassification = ToBeClassified;
+            trigger OnValidate();
+            begin
+                if("Search Name" = uppercase(xRec."Search Name")) or("Search Name" = '') then
+                    "Search Name" := Name;
+            end;
         }
         field(30; "Seminar Duration"; Decimal)
         {
@@ -76,6 +81,15 @@ table 123456701 Seminar
             Caption = 'Gen. Prod. Posting Group';
             TableRelation = "Gen. Product Posting Group";
             DataClassification = ToBeClassified;
+            trigger OnValidate();
+            var
+                GenProductPostingGroup: Record "Gen. Product Posting Group";
+            begin
+                if(xRec."Gen. Prod. Posting Group" <> "Gen. Prod. Posting Group") then begin
+                    if GenProductPostingGroup.ValidateVatProdPostingGroup(GenProductPostingGroup, "Gen. Prod. Posting Group") then
+                        Validate("VAT Prod. Posting Group", GenProductPostingGroup."Def. VAT Prod. Posting Group");
+                end;
+            end;
         }
         field(120; "VAT Prod. Posting Group"; Code[10])
         {
@@ -140,4 +154,19 @@ table 123456701 Seminar
         "Last Date Modified" := WorkDate;
     end;
 
+    procedure AssistEdit(): Boolean;
+    begin
+        with Seminar do
+        begin
+            Seminar := Rec;
+            SeminarSetup.get;
+            SeminarSetup.TestField("Seminar Nos.");
+            if NoSeriesManagement.SelectSeries(SeminarSetup."Seminar Nos."
+            , xRec."No. Series", "No. Series") then begin
+                NoSeriesManagement.SetSeries("No.");
+                Rec := Seminar;
+                exit(true);
+            end;
+        end;
+    end;
 }
