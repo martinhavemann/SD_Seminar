@@ -57,12 +57,13 @@ page 123456710 "Seminar Registration"
                 field("Maximum Participants"; "Maximum Participants")
                 {
                 }
-                part(SeminarRegistrationLines; "Seminar Registration Subpage")
+                
+            }
+            part(SeminarRegistrationLines; "Seminar Registration Subpage")
                 {
                     Caption = 'Lines';
                     SubPageLink = "Document No." = field ("No.");
                 }
-            }
             group("Seminar Room")
             {
 
