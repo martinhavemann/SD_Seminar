@@ -65,9 +65,9 @@ table 123456710 "Seminar Registration Header"
         {
             Caption = 'Seminar Name';
         }
-        field(5; "Instructor Code"; Code[10])
+        field(5; "Instructor Resource No."; Code[10])
         {
-            Caption = 'Instructor Code';
+            Caption = 'Instructor Resource No.';
             TableRelation = Resource where (Type = const (Person));
 
             trigger OnValidate();
@@ -78,7 +78,7 @@ table 123456710 "Seminar Registration Header"
         field(6; "Instructor Name"; Text[50])
         {
             Caption = 'Instructor Name';
-            CalcFormula = Lookup (Resource.Name where ("No." = Field ("Instructor Code"),Type = const (Person)));
+            CalcFormula = Lookup (Resource.Name where ("No." = Field ("Instructor Resource No."),Type = const (Person)));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -101,14 +101,14 @@ table 123456710 "Seminar Registration Header"
         {
             Caption = 'Minimum Participants';
         }
-        field(11; "Room Code"; Code[10])
+        field(11; "Room Resource No."; Code[10])
         {
-            Caption = 'Room Code';
+            Caption = 'Room Resource No.';
             TableRelation = Resource where (Type = const (Machine));
 
             trigger OnValidate();
             begin
-                if "Room Code" = '' then begin
+                if "Room Resource No." = '' then begin
                     "Room Name" := '';
                     "Room Address" := '';
                     "Room Address 2" := '';
@@ -117,7 +117,7 @@ table 123456710 "Seminar Registration Header"
                     "Room County" := '';
                     "Room Country/Reg. Code" := '';
                 end else begin
-                    SeminarRoom.GET("Room Code");
+                    SeminarRoom.GET("Room Resource No.");
                     "Room Name" := SeminarRoom.Name;
                     "Room Address" := SeminarRoom.Address;
                     "Room Address 2" := SeminarRoom."Address 2";
@@ -290,7 +290,7 @@ table 123456710 "Seminar Registration Header"
         key(PK; "No.")
         {
         }
-        key(Key2; "Room Code")
+        key(Key2; "Room Resource No.")
         {
             SumIndexFields = Duration;
         }

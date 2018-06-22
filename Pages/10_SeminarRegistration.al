@@ -3,11 +3,12 @@ page 123456710 "Seminar Registration"
     // CSD1.00 - 2018-01-01 - D. E. Veloper
     //   Chapter 6 - Lab 3-1
     //     - Created new page
+    //   Chapter 7 - Lab 5-8
+    //     - Added Post Action  
 
     Caption = 'Seminar Registration';
     PageType = Document;
     SourceTable = "Seminar Registration Header";
-    UsageCategory = tasks;
 
     layout
     {
@@ -33,7 +34,7 @@ page 123456710 "Seminar Registration"
                 field("Seminar Name"; "Seminar Name")
                 {
                 }
-                field("Instructor Resource No."; "Instructor Code")
+                field("Instructor Resource No."; "Instructor Resource No.")
                 {
                 }
                 field("Instructor Name"; "Instructor Name")
@@ -57,17 +58,15 @@ page 123456710 "Seminar Registration"
                 field("Maximum Participants"; "Maximum Participants")
                 {
                 }
-                
             }
             part(SeminarRegistrationLines; "Seminar Registration Subpage")
-                {
-                    Caption = 'Lines';
-                    SubPageLink = "Document No." = field ("No.");
-                }
+            {
+                Caption = 'Lines';
+                SubPageLink = "Document No." = field ("No.");
+            }
             group("Seminar Room")
             {
-
-                field("Room Resource Code"; "Room Code")
+                field("Room Resource Code"; "Room Resource No.")
                 {
                 }
                 field("Room Name"; "Room Name")
@@ -111,11 +110,12 @@ page 123456710 "Seminar Registration"
             {
                 SubPageLink = "No." = field ("Seminar No.");
             }
-            part("Customer Details"; "Customer Details FactBox")
+            part("Customer Details FactBox"; "Customer Details FactBox")
             {
                 Provider = SeminarRegistrationLines;
                 SubPageLink = "No." = field ("Bill-to Customer No.");
             }
+
             systempart("Links"; Links)
             {
             }
@@ -147,6 +147,19 @@ page 123456710 "Seminar Registration"
                     RunObject = Page 123456724;
                     RunPageLink = "Document No." = Field ("No.");
                 }
+            }
+        }
+        area(Processing)
+        {
+            action("&Post")
+            {
+                Caption = '&Post';
+                Image = PostDocument;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
+                ShortcutKey = F9;
+                RunObject = codeunit "Seminar-Post (Yes/No)";
             }
         }
     }
