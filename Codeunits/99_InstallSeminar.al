@@ -109,7 +109,7 @@ codeunit 123456799 InstallSeminar
     begin
         SemRegHead.init;
         SemRegHead.Insert(true);
-        SemRegHead.Validate("Seminar No.", '80040');s
+        SemRegHead.Validate("Seminar No.", '80040');
         SemRegHead.Validate("Instructor Resource No.", 'INSTR');
         SemRegHead.Validate("Starting Date", calcdate('<+1w-cw>', WorkDate));
         SemRegHead.Validate("Room Resource No.", 'ROOM 01');
