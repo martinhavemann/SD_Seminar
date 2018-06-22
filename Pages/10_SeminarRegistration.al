@@ -161,6 +161,23 @@ page 123456710 "Seminar Registration"
                 ShortcutKey = F9;
                 RunObject = codeunit "Seminar-Post (Yes/No)";
             }
+            action("&Navigate")
+            {
+                Caption = '&Navigate';
+                Image = Navigate;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
+
+                trigger OnAction();
+                var
+                    Navigate: page navigate;
+
+                begin
+                    Navigate.SetDoc("Posting Date", "No.");
+                    Navigate.Run;
+                end;
+            }
         }
     }
 }
