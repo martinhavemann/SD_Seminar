@@ -14,7 +14,7 @@ tableextension 123456700 "CSD ResourceExt" extends Resource
         field(12345701;"CSD Resource Type";Option)
         {
             OptionMembers = "Internal","External";
-            OptionCaption = 'Internal","External';
+            OptionCaption = 'Internal,External';
             DataClassification = ToBeClassified;
         }
         field(12345702;"CSD Maximum Participants";Integer)
