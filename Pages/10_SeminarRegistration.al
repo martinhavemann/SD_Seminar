@@ -65,7 +65,7 @@ page 123456710 "Seminar Registration"
                     Caption = 'Lines';
                     SubPageLink = "Document No." = field ("No.");
                 }
-                field("Room Resource Code"; "Room Resource Code")
+                field("Room Resource Code"; "Room Resource No.")
                 {
                 }
                 field("Room Name"; "Room Name")

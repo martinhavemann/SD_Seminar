@@ -18,10 +18,55 @@
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Page</note>
         </trans-unit>
+        <trans-unit id="Page 3319032050 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Seminar Registration</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Page</note>
+        </trans-unit>
+        <trans-unit id="Page 3319032050 - Control 3854287965 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lines</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Control</note>
+        </trans-unit>
+        <trans-unit id="Page 3319032050 - Action 1570223100 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&amp;Seminar Registration</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Action</note>
+        </trans-unit>
+        <trans-unit id="Page 3319032050 - Action 3000180178 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Co&amp;mments</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Action</note>
+        </trans-unit>
+        <trans-unit id="Page 3319032050 - Action 3761272521 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&amp;Charges</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Action</note>
+        </trans-unit>
         <trans-unit id="Page 1755843979 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Lines</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Page - Page</note>
+        </trans-unit>
+        <trans-unit id="Page 3800278800 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Seminar Registration List</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Page</note>
+        </trans-unit>
+        <trans-unit id="Page 3800278800 - Action 1570223100 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&amp;Seminar Registration</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Action</note>
+        </trans-unit>
+        <trans-unit id="Page 3800278800 - Action 3000180178 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Co&amp;mments</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Action</note>
+        </trans-unit>
+        <trans-unit id="Page 3800278800 - Action 3761272521 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&amp;Charges</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page - Action</note>
         </trans-unit>
         <trans-unit id="Page 2014763884 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Seminar Details</source>
@@ -223,13 +268,13 @@
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 2143111931 - Field 513339096 - Property 62802879" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Planning,Registration,Closed,Canceled</source>
+        <trans-unit id="Table 2143111931 - Field 513339096 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 2143111931 - Field 513339096 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Status</source>
+        <trans-unit id="Table 2143111931 - Field 513339096 - Property 62802879" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Planning,Registration,Closed,Canceled</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
@@ -279,7 +324,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
         <trans-unit id="Table 2143111931 - Field 3432263389 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Room Country/Reg. Code</source>
+          <source>Room Country/reg. Code</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
@@ -299,7 +344,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
         <trans-unit id="Table 2143111931 - Field 236064653 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>VAT Prod. Posting Group</source>
+          <source>VAT Product Posting Group</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
@@ -338,6 +383,26 @@
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
+        <trans-unit id="Table 2143111931 - Field 2567013052 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Instructor Resource No.</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
+        </trans-unit>
+        <trans-unit id="Table 2143111931 - Field 860014036 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Room Resource No.</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
+        </trans-unit>
+        <trans-unit id="Table 2143111931 - NamedType 3114637384" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You cannot delete the Seminar Registration, because there is at least one %1 where %2=%3.</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table - Label</note>
+        </trans-unit>
+        <trans-unit id="Table 2143111931 - NamedType 3752334001" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You cannot change the %1, because there is at least one %2 with %3=%4.</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table - Label</note>
+        </trans-unit>
         <trans-unit id="Table 2143111931 - NamedType 732759939" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>This Seminar is for %1 participants. \The selected Room has a maximum of %2 participants \Do you want to change %3 for the Seminar from %4 to %5?</source>
           <note from="Developer" annotates="general" priority="2" />
@@ -352,6 +417,11 @@
           <source>You cannot delete the Seminar Registration, because there is at least one %1.</source>
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Label</note>
+        </trans-unit>
+        <trans-unit id="Table 2235904756 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Seminar Registration Line</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table - Table</note>
         </trans-unit>
         <trans-unit id="Table 2235904756 - Field 486908828 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>Document No.</source>

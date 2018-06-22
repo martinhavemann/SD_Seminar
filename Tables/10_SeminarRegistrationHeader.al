@@ -289,7 +289,7 @@ Caption = 'Room City';
             TableRelation = Resource."No.";
 
         }
-        field(30; "Room Resource Code"; code[20])
+        field(30; "Room Resource No."; code[20])
         {
             Caption = 'Room Resource No.';
             TableRelation = Resource."No.";
