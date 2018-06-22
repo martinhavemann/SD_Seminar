@@ -161,23 +161,20 @@ page 123456710 "Seminar Registration"
                 ShortcutKey = F9;
                 RunObject = codeunit "Seminar-Post (Yes/No)";
             }
-            action("&Navigate")
+            action("&Print")
             {
-                Caption = '&Navigate';
-                Image = Navigate;
+                Caption = '&Print';
+                Image = Print;
                 Promoted = true;
                 PromotedIsBig = true;
                 PromotedCategory = Process;
-
                 trigger OnAction();
                 var
-                    Navigate: page navigate;
-
+                    SeminarReportSelection : Record "Seminar Report Selections";
                 begin
-                    Navigate.SetDoc("Posting Date", "No.");
-                    Navigate.Run;
+                    SeminarReportSelection.PrintReportSelection(SeminarReportSelection.Usage::Registration,Rec);
                 end;
-            }
+            }            
         }
     }
 }
