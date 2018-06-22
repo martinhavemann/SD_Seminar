@@ -21,7 +21,7 @@ table 123456710 "Seminar Registration Header"
         }
         field(2; "Starting Date"; Date)
         {
-Caption = 'Starting Date';
+            Caption = 'Starting Date';
             trigger OnValidate();
             begin
                 if "Starting Date" <> xRec."Starting Date" then
@@ -78,8 +78,7 @@ Caption = 'Starting Date';
         field(6; "Instructor Name"; Text[50])
         {
             Caption = 'Instructor Name';
-            CalcFormula = Lookup (Resource.Name where ("No." = Field ("Instructor Code"),
-                                                      Type = const (Person)));
+            CalcFormula = Lookup (Resource.Name where ("No." = Field ("Instructor Code"),Type = const (Person)));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -169,7 +168,7 @@ Caption = 'Starting Date';
         }
         field(16; "Room City"; Text[30])
         {
-Caption = 'Room City';
+            Caption = 'Room City';
             trigger OnValidate();
             begin
                 PostCode.ValidateCity("Room City", "Room Post Code", "Room County", "Room Country/Reg. Code", (CurrFieldNo <> 0) and GuiAllowed);
@@ -283,18 +282,7 @@ Caption = 'Room City';
         {
             Caption = 'Posting No.';
         }
-        field(29; "Instructor Resource No."; code[20])
-        {
-            Caption = 'Instructor Resource No.';
-            TableRelation = Resource."No.";
-
-        }
-        field(30; "Room Resource No."; code[20])
-        {
-            Caption = 'Room Resource No.';
-            TableRelation = Resource."No.";
-
-        }
+        
     }
 
     keys

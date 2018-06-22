@@ -383,16 +383,6 @@
           <note from="Developer" annotates="general" priority="2" />
           <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
         </trans-unit>
-        <trans-unit id="Table 2143111931 - Field 2567013052 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Instructor Resource No.</source>
-          <note from="Developer" annotates="general" priority="2" />
-          <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
-        </trans-unit>
-        <trans-unit id="Table 2143111931 - Field 860014036 - Property 2879900210" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Room Resource No.</source>
-          <note from="Developer" annotates="general" priority="2" />
-          <note from="Xliff Generator" annotates="general" priority="3">Table - Field</note>
-        </trans-unit>
         <trans-unit id="Table 2143111931 - NamedType 3114637384" maxWidth="999" size-unit="char" translate="yes" xml:space="preserve">
           <source>You cannot delete the Seminar Registration, because there is at least one %1 where %2=%3.</source>
           <note from="Developer" annotates="general" priority="2" />

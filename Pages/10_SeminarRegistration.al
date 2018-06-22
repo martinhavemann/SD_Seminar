@@ -33,7 +33,7 @@ page 123456710 "Seminar Registration"
                 field("Seminar Name"; "Seminar Name")
                 {
                 }
-                field("Instructor Resource No."; "Instructor Resource No.")
+                field("Instructor Resource No."; "Instructor Code")
                 {
                 }
                 field("Instructor Name"; "Instructor Name")
@@ -57,15 +57,16 @@ page 123456710 "Seminar Registration"
                 field("Maximum Participants"; "Maximum Participants")
                 {
                 }
-            }
-            group("Seminar Room")
-            {
                 part(SeminarRegistrationLines; "Seminar Registration Subpage")
                 {
                     Caption = 'Lines';
                     SubPageLink = "Document No." = field ("No.");
                 }
-                field("Room Resource Code"; "Room Resource No.")
+            }
+            group("Seminar Room")
+            {
+
+                field("Room Resource Code"; "Room Code")
                 {
                 }
                 field("Room Name"; "Room Name")
