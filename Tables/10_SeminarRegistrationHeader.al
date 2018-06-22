@@ -78,7 +78,7 @@ table 123456710 "Seminar Registration Header"
         field(6; "Instructor Name"; Text[50])
         {
             Caption = 'Instructor Name';
-            CalcFormula = Lookup (Resource.Name where ("No." = Field ("Instructor Resource No."),Type = const (Person)));
+            CalcFormula = Lookup (Resource.Name where ("No." = Field ("Instructor Resource No."), Type = const (Person)));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -282,7 +282,7 @@ table 123456710 "Seminar Registration Header"
         {
             Caption = 'Posting No.';
         }
-        
+
     }
 
     keys
@@ -350,6 +350,12 @@ table 123456710 "Seminar Registration Header"
         "Document Date" := WORKDATE;
         SeminarSetup.GET;
         NoSeriesMgt.SetDefaultSeries("Posting No. Series", SeminarSetup."Posted Seminar Reg. Nos.");
+        // >> Lab 8 1-1
+        if GetFilter("Seminar No.") <> '' then
+            if GetRangeMin("Seminar No.") = GetRangeMax("Seminar No.")
+then
+                Validate("Seminar No.", GetRangeMin("Seminar No."));
+        // << Lab 8 1-1
     end;
 
     procedure AssistEdit(OldSeminarRegHeader: Record "Seminar Registration Header"): Boolean;

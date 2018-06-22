@@ -11,7 +11,7 @@ page 123456701 "Seminar Card"
             {
                 field("No."; "No.")
                 {
-                    AssistEdit=true;
+                    AssistEdit = true;
                     trigger OnAssistEdit();
                     begin
                         if AssistEdit then
@@ -85,14 +85,43 @@ page 123456701 "Seminar Card"
             {
                 action("Comments")
                 {
-                    //RunObject = page "Seminar Comment Sheet";
-                    //RunPageLink = "Table Name"= const(Seminar),
-                    // "No."=field("No.");
+                    RunObject = page "Seminar Comment Sheet";
+                    RunPageLink = "Table Name"= const(Seminar),
+                     "No."=field("No.");
                     Image = Comment;
                     Promoted = true;
                     PromotedIsBig = true;
                     PromotedOnly = true;
                 }
+                action("Ledger Entries")
+                {
+                    RunObject = page "Seminar Ledger Entries";
+                    RunPageLink = "Seminar No." = field ("No.");
+                    Promoted = true;
+                    PromotedCategory = Process;
+                    ShortcutKey = "Ctrl+F7";
+                    Image = WarrantyLedger;
+                }
+                action("&Registrations")
+                {
+                    RunObject = page "Seminar Registration List";
+                    RunPageLink = "Seminar No." = field ("No.");
+                    Image = Timesheet;
+                    Promoted = true;
+                    PromotedCategory = Process;
+                }
+            }
+        }
+        area(Processing)
+        {
+            action("Seminar Registration")
+            {
+                RunObject = page "Seminar Registration";
+                RunPageLink = "Seminar No." = field ("No.");
+                RunPageMode = Create;
+                Image = NewTimesheet;
+                Promoted = true;
+                PromotedCategory = New;
             }
         }
     }
